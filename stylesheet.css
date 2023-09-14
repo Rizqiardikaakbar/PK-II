@@ -1,45 +1,55 @@
-<div class="header">
-      <div class="header-logo">
-        prograte</div>
-      <div classé"header-list">
-      </div>
-    <ul>
-      <li>Tentang</li>
-      <li>Pelajaran</li>
-      <li>Hubungi Kami</li>
-    </ul>
-    </div>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT84UlDr2QM-WtVFBzqUstCNwj_CG0DjojUEQ&usqp=CAU">
+h1 {
+  color: #e6855e;
+  font-size:30px;
+  background-color:#f3f372;
+  height:80px;
+  width:200px;
+}
+img {
+  height:1080px;
+}
+p {
+  color: #ff0000;
+  font-size:20px;
+  font-family:"lucida grande"
+}
 
-<h1>Indomaret Syariah</h1>
-<a>Selamat Datang di Indomaret Syariah<a>
-<marquee>Jual ayam, buku, dan gamis</marquee>
-<h2>Sekalian Pulsanya, Kak?</h2>
-<p>Pakai kresek tambah 2000</p>
-<a href="https://images.app.goo.gl/zKcDd6vrNGXmBMQ67"> Jika ingin beli langsung, bisa klik link ini ya maniezzz</a>
+li {
+  color: #444;
+}
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>prograte</title>
-    <link rel="stylesheet" href="stylesheet.css">
-  </head>
-</html>
+.selected{
+  color:#ff0000;
+}
 
-<ul>
-  <li class="selected">HTML</li>
-  <li>PHP</li>
-  <li>Ruby</li>
-</ul>
-<div class="footer">
- <div class="footer-logo">
-  Prograte</div>
- <div class="footer-list>
-  <ul>
-   <li>Tentang</li>
-   <li>Karier</li>
-   <li>Hubungi kami</li>
-  </ul>
- </div>
-</div>
+.header {
+    background-color: #26d0c9;
+    color: #fff; 
+    height: 90px; 
+  }
+  li {
+     list-style: none; 
+     float: left; 
+     padding:20px 40px;
+}
+.header-logo { 
+  float: left; 
+  font-size: 36px; 
+  padding:20px 40px;
+}
+.footer { 
+  background-color: #2f5167;
+  color: #fff;
+  height: 120px;
+  padding: 40px;
+}
+.footer-logo { 
+  font-size: 32px; 
+  float: left;
+} 
+.footer-list { 
+  float: right;
+}
+.footer-list li { 
+  padding-bottom: 20px; 
+}
