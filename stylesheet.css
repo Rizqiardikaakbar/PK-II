@@ -1,138 +1,31 @@
-body {
-    font-family: 'bodoni', sans-serif;
-    background-color: #cdcbcb;
-    margin: 0;
-    padding: 0;
-    cursor: url('foto\ cursor.jpg'), auto;
-}
+// Add interactivity to the "Buy Now" buttons
+const buyButtons = document.querySelectorAll('.buy-button');
 
-.header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+buyButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        alert('Thank you for your purchase!');
+    });
+});
+// Initialize variables
+const cart = document.getElementById('cart');
+const cartItems = document.getElementById('cart-items');
+const buyButtons = document.querySelectorAll('.buy-button');
 
-@keyframes glow {
-    0%, 100% {
-      color: #ffbf00; /* Warna menyala */
-      text-shadow: 0 0 10px rgba(255, 191, 0, 0.8); /* Efek bayangan */
-    }
-    50% {
-      color: #fff; /* Warna normal */
-      text-shadow: none; /* Tidak ada efek bayangan */
-    }
-  }
+// Cart items and total
+const cartData = [];
+let cartTotal = 0;
 
-.logo {
-    font-size: 2em;
-    font-family:'bodoni', sans-serif;
-    color: #000;
-    animation: glow 2s linear infinite;
-}
+// Function to update the cart display
+function updateCartDisplay() {
+    cartItems.innerHTML = '';
+    cartTotal = 0;
 
-@keyframes slideRight {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
+    cartData.forEach(item => {
+        const li = document.createElement('li');
+        li.innerHTML = `<span>${item.name}</span><span>$${item.price}</span>`;
+        cartItems.appendChild(li);
+        cartTotal += item.price;
+    });
 
-
-.animated-text {
-    display: inline-block;
-    font-size: 30px;
-    position: center;
-    overflow: hidden;
-    animation: slideRight 10s linear infinite;
-}
-
-.nav-list {
-    list-style-type: none;
-    font-size: 1em;
-    padding: 0;
-}
-
-.nav-item {
-    display: inline;
-    margin: 0 1em;
-}
-
-.nav-item a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.main-content {
-    padding: 2em;
-}
-
-.featured-products {
-    margin-bottom: 2em;
-}
-
-.product {
-    text-align: center;
-    margin-bottom: 1em;
-}
-
-.product img {
-    max-width: 10%;
-    border:4px solid #ffbf00;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-a {
-    color: #ffbf00; 
-    text-decoration: none; 
-}
-
-
-.buy-button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 0.5em 1em;
-    font-size: 1em;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.buy-button:hover {
-    background-color: #555;
-}
-
-.about-us {
-    text-align: center;
-}
-
-.whatsapp-link {
-    display: inline-block;
-    background-color: #25d366;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.whatsapp-link:hover {
-    background-color: #128C7E;
-}
-
-
-.footer {
-    background-color: #333;
-    color: #cecccc;
-    text-align: center;
-    padding: 1em;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+    if (cartData.length > 0) {
+        const totalLi = document.createElement('
